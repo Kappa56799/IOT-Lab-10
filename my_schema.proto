@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package mqtt_messages;
+
+// Define the main message that will be transmitted via MQTT.
+message SensorData {
+  required string publisher_id = 1;  // Unique ID of the publisher/sensor
+  required float temperature = 2;    // Temperature value (float or double)
+  required uint64 current_time = 3;    // Embedded Time message
+}
+
